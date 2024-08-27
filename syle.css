@@ -1,0 +1,98 @@
+/* Memory card container */
+#memoryGame {
+    grid-template-columns: repeat(4,200px);
+    grid-template-rows: repeat(3,200px);
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+    align-items: center; /* Center cards vertically */
+    margin: 20px auto; /* Add padding to the container */
+  }
+  
+  /* Memory card styles */
+  .memory-card {
+    width: 200px; /* Set card width */
+    height: 200px; /* Set card height */
+    margin: 10px; /* Set margin around cards */
+    perspective: 1000px; /* Define perspective for 3D effect */
+    position: relative; /* Ensure relative positioning for absolute children */
+  }
+  
+ .memory-card img {
+    width: 200px; /* Ensure image fits inside card */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Ensure relative positioning for absolute children */
+    margin:10px;
+    display: center;
+  
+  }
+.back-card{
+  background-position: center center;
+  background-size: cover;
+  backface-visibility: hidden;
+  width: 200px; /* Ensure image fits inside card */
+  height: 200px; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners */
+  position: absolute; /* Ensure relative positioning for absolute children */
+  margin:10px;
+  display: center;
+}
+
+  
+  
+  /* Flipped state animation */
+  .memory-card.flipped {
+    transform: rotateY(180deg); /* Rotate card around Y-axis */
+    transition: transform 0.6s ease; /* Smooth transition */
+  }
+  
+  /* Matched state */
+  .memory-card.matched {
+    visibility: hidden; /* Hide matched cards */
+  }
+  
+
+  .hidden{
+    visibility: hidden;
+
+    }
+
+.memory-card .front {
+      cursor:default; /* Regular cursor on the front card */
+  }
+  
+  /* Style for back card */
+  .memory-card .back {
+      cursor: pointer; /* Click cursor on the back card */
+  }
+  
+  h1{
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+
+  #settings{
+    font-weight: 700;
+    font-size:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #A16BFE; /* צבע רקע */
+}
